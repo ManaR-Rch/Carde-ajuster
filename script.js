@@ -16,3 +16,9 @@ function addImage() {
     card.appendChild(img); 
   }
 }
+
+function changeBackgroundColor() {
+  var card = document.getElementById('card');
+  var color = document.getElementById('bgColor').value;
+  card.style.backgroundColor = color;
+}
