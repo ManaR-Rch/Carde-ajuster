@@ -39,3 +39,10 @@ function changeFontFamily() {
   var font = document.getElementById('fontFamily').value;
   card.style.fontFamily = font;
 }
+
+function alignText(alignment) {
+  var texts = document.getElementsByClassName('text-item');
+  for (var i = 0; i < texts.length; i++) {
+    texts[i].style.textAlign = alignment; 
+  }
+}
