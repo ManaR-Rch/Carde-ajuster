@@ -61,3 +61,9 @@ function addBorder() {
     texts[i].style.textShadow = '2px 2px 5px gray'; 
   }
 }
+
+function saveToLocalStorage() {
+  var cardContent = document.getElementById('card').innerHTML;
+  localStorage.setItem('savedCard', cardContent);
+  alert('Carte sauvegardée avec succès !');
+}
