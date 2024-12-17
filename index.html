@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Créateur de Cartes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Créateur de Cartes</h1>
+  <div id="controls">
+    <button onclick="addText()">Ajouter Texte</button>
+    <button onclick="addImage()">Ajouter Image</button>
+    <label>
+      Couleur de Fond:
+      <input type="color" id="bgColor" onchange="changeBackgroundColor()">
+    </label>
+    <label>
+      Couleur de Texte:
+      <input type="color" id="textColor" onchange="changeTextColor()">
+    </label>
+    <label>
+      Taille Texte:
+      <input type="range" id="textSize" min="10" max="50" value="16" oninput="changeTextSize()">
+    </label>
+    <label>
+      Police:
+      <select id="fontFamily" onchange="changeFontFamily()">
+        <option value="Arial">Arial</option>
+        <option value="Georgia">Georgia</option>
+        <option value="Courier New">Courier New</option>
+        <option value="Times New Roman">Times New Roman</option>
+      </select>
+    </label>
+  </div>
+  <div id="card" contenteditable="true">
+    Cliquez ici pour commencer à personnaliser votre carte.
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
