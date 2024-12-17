@@ -33,3 +33,9 @@ function changeTextSize() {
   var size = document.getElementById('textSize').value;
   card.style.fontSize = size + 'px';
 }
+
+function changeFontFamily() {
+  var card = document.getElementById('card');
+  var font = document.getElementById('fontFamily').value;
+  card.style.fontFamily = font;
+}
