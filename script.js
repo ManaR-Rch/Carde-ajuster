@@ -2,7 +2,8 @@ function addText() {
   var card = document.getElementById('card');
   var text = document.createElement('div');
   text.innerText = 'Texte personnalisé';
-  card.appendChild(text); 
+  text.className = 'text-item'; 
+  card.appendChild(text);
 }
 
 function addImage() {
@@ -38,4 +39,26 @@ function changeFontFamily() {
   var card = document.getElementById('card');
   var font = document.getElementById('fontFamily').value;
   card.style.fontFamily = font;
+}
+
+function alignText(alignment) {
+  var texts = document.getElementsByClassName('text-item');
+  for (var i = 0; i < texts.length; i++) {
+    texts[i].style.textAlign = alignment; 
+  }
+}
+
+function addBorder() {
+  var texts = document.getElementsByClassName('text-item');
+  for (var i = 0; i < texts.length; i++) {
+    texts[i].style.border = '1px solid black'; 
+    texts[i].style.padding = '5px';
+}
+ }
+
+function addShadow() {
+  var texts = document.getElementsByClassName('text-item');
+  for (var i = 0; i < texts.length; i++) {
+    texts[i].style.textShadow = '2px 2px 5px gray'; 
+  }
 }
