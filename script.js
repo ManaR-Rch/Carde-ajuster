@@ -46,3 +46,11 @@ function alignText(alignment) {
     texts[i].style.textAlign = alignment; 
   }
 }
+
+function addBorder() {
+  var texts = document.getElementsByClassName('text-item');
+  for (var i = 0; i < texts.length; i++) {
+    texts[i].style.border = '1px solid black'; 
+    texts[i].style.padding = '5px';
+}
+ }
