@@ -76,3 +76,18 @@ function loadFromLocalStorage() {
     alert('Aucune carte sauvegardée trouvée.');
   }
 }
+function downloadCard() {
+  var card = document.getElementById('card');
+  html2canvas(card).then(function(canvas) {
+    var link = document.createElement('a');
+    link.download = 'carte_personnalisee.png';
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+  });
+}
+
+
+
+
+
+
