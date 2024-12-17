@@ -54,3 +54,10 @@ function addBorder() {
     texts[i].style.padding = '5px';
 }
  }
+
+ function addShadow() {
+  var texts = document.getElementsByClassName('text-item');
+  for (var i = 0; i < texts.length; i++) {
+    texts[i].style.textShadow = '2px 2px 5px gray'; 
+  }
+}
