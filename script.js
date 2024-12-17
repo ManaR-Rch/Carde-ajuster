@@ -67,3 +67,12 @@ function saveToLocalStorage() {
   localStorage.setItem('savedCard', cardContent);
   alert('Carte sauvegardée avec succès !');
 }
+function loadFromLocalStorage() {
+  var savedContent = localStorage.getItem('savedCard');
+  if (savedContent) {
+    document.getElementById('card').innerHTML = savedContent;
+    alert('Carte chargée avec succès !');
+  } else {
+    alert('Aucune carte sauvegardée trouvée.');
+  }
+}
