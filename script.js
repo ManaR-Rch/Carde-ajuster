@@ -28,3 +28,8 @@ function changeTextColor() {
   var color = document.getElementById('textColor').value;
   card.style.color = color;
 }
+function changeTextSize() {
+  var card = document.getElementById('card');
+  var size = document.getElementById('textSize').value;
+  card.style.fontSize = size + 'px';
+}
