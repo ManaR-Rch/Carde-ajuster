@@ -22,3 +22,9 @@ function changeBackgroundColor() {
   var color = document.getElementById('bgColor').value;
   card.style.backgroundColor = color;
 }
+
+function changeTextColor() {
+  var card = document.getElementById('card');
+  var color = document.getElementById('textColor').value;
+  card.style.color = color;
+}
