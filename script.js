@@ -62,3 +62,31 @@ function addShadow() {
     texts[i].style.textShadow = '2px 2px 5px gray'; 
   }
 }
+
+
+
+function saveToLocalStorage() {
+  var cardContent = document.getElementById('card').innerHTML;
+  localStorage.setItem('savedCard', cardContent);
+  alert('Carte sauvegardée avec succès !');
+}
+
+function loadFromLocalStorage() {
+  var savedContent = localStorage.getItem('savedCard');
+  if (savedContent) {
+    document.getElementById('card').innerHTML = savedContent;
+    alert('Carte chargée avec succès !');
+  } else {
+    alert('Aucune carte sauvegardée trouvée.');
+  }
+}
+
+function downloadCard() {
+  var card = document.getElementById('card');
+  html2canvas(card).then(function(canvas) {
+    var link = document.createElement('a');
+    link.download = 'carte_personnalisee.png';
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+  });
+}
